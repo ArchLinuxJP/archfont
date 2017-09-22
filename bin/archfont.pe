@@ -1,0 +1,48 @@
+#!/usr/bin/fontforge -script
+
+family = "archfont"
+
+noto = "font/NotoMono-hinted/NotoMono-Regular.ttf"
+jp = "font/NotoSansCJKjp-hinted/NotoSansCJKjp-Regular.ttf"
+emoji = "font/NotoEmoji-unhinted/NotoEmoji-Regular.ttf"
+icomoon = "font/icomoon/icomoon-scaled.ttf"
+icomoon_s = "font/icomoon/icomoon.ttf"
+
+Open(icomoon)
+ScaleToEm(2048)
+SelectAll()
+foreach
+  # w x 0.5, h x 0.5
+  Scale(50, 50, 0, 0) 
+endloop
+Generate(icomoon_s)
+Close()
+
+family = "archfont-emoji"
+Open(noto)
+MergeFonts(emoji)
+SetFontNames(family, family, family, "Regular")
+Generate(family + ".ttf")
+Close()
+
+family = "archfont-en"
+Open(noto)
+MergeFonts(icomoon)
+SetFontNames(family, family, family, "Regular")
+Generate(family + ".ttf")
+Close()
+
+family = "archfont-jp"
+Open(jp)
+MergeFonts(icomoon)
+SetFontNames(family, family, family, "Regular")
+Generate(family + ".ttf")
+Close()
+
+family = "archfont"
+Open("archfont-jp.ttf")
+ScaleToEm(2048)
+MergeFonts(noto)
+SetFontNames(family, family, family, "Regular")
+Generate(family + ".ttf")
+Close()
