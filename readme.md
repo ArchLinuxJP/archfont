@@ -7,7 +7,7 @@
 $ cat .bashrc
 ```
 
-![](https://github.com/archlinuxjp/archfont/img/archfont.png)
+![](https://github.com/ArchLinuxJP/archfont/blob/master/img/archfont.png?raw=true)
 
 ## インストール
 
