@@ -17,7 +17,7 @@ $ cd archfont
 $ mkdir -p ~/.local/share/fonts
 $ cp ./archfont.ttf ~/.local/share/fonts
 $ fc-cache -fv
-# terminalで表示するにはterminal appのフォントにarchfontを設定する必要があります
+# terminalで表示するにはterminal appのフォントにarchfont(archfont-emoji for Powerline)を設定する必要があります
 ```
 
 ## 使用したもの
