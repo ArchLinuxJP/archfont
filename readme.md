@@ -1,6 +1,6 @@
 # archfont
 
-これは、archlinuxのロゴ及び絵文字を使える合成フォントです。`Google Note Fonts`をベースにしています。
+これは、archlinuxのロゴ及び絵文字を使える合成フォントです。`Google Noto Fonts`をベースにしています。
 
 ```sh
 # フォントをインストール後にはこのように文字化けなしで表示されます
